@@ -3,9 +3,9 @@ Skyline plugin for Red Dead Redemption override several graphics settings
 
 # End-user Usage
 
-Put folder `01007820196A6000` to `atmosphere\contents` and start game.</br>
+Put folder `01007820196A6000` to `atmosphere/contents` and start the game.</br>
 Boot time may be increased by few seconds.</br>
-It should work with all game versions (confirmed working ?).
+It should work with all game versions (confirmed working 1.0.1).
 
 # Thanks to
 - The Skyline Project
