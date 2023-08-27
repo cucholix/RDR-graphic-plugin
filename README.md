@@ -10,4 +10,5 @@ It should work with all game versions (confirmed working ?).
 # Thanks to
 - The Skyline Project
 - ECLIPSE00074 for the mod
-- masagrator for his MonHunRiseResPlugin which I used as template for this project 
+- masagrator for his MonHunRiseResPlugin which I used as template for this project
+- Medel for testing
