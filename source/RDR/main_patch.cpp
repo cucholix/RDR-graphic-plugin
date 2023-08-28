@@ -122,34 +122,34 @@ constinit uint8_t mod12[8] = {0x49, 0x8F, 0xA8, 0x52, 0x0A, 0x59, 0xA8, 0x52};
 //09 00 80 52 0A 00 80 52 - [movz w9, #0] - [movz w10, #0]
 constinit uint8_t mod12_p[8] = {0x09, 0x00, 0x80, 0x52, 0x0A, 0x00, 0x80, 0x52};
 
-//08 F0 A7 52 BF 1E 08 B9
+//[08 F0 A7 52] BF 1E 08 B9 [movz w8, #0x3f80, lsl #16]
 constinit uint8_t mod13[8] = {0x08, 0xF0, 0xA7, 0x52, 0xBF, 0x1E, 0x08, 0xB9};
 							 					 
-//08 08 A8 52
+//08 08 A8 52 [movz w8, #0x4040, lsl #16]
 constinit uint8_t mod13_p[4] = {0x08, 0x08, 0xA8, 0x52};
 
-//FF 17 28 7C A8 52 00 01
+//FF 17 28 7C A8 52 00 01 - ?
 constinit uint8_t mod14[8] = {0xFF, 0x17, 0x28, 0x7C, 0xA8, 0x52, 0x00, 0x01};
 							 					 
 //FF 17 68 88
 constinit uint8_t mod14_p[4] = {0xFF, 0x17, 0x68, 0x88};
 
-//48 8F A8 52 3F 00 00 71
+//[48 8F A8 52] 3F 00 00 71 - [movz w8, #0x447a, lsl #16]
 constinit uint8_t mod15[8] = {0x48, 0x8F, 0xA8, 0x52, 0x3F, 0x00, 0x00, 0x71};
 							 					 
-//48 9F A8 52
+//48 9F A8 52 - [movz w8, #0x44fa, lsl #16]
 constinit uint8_t mod15_p[4] = {0x48, 0x9F, 0xA8, 0x52};
 
-//08 00 90 52 68 97 A8 72 - [adrp x30, #0x100000] - [stp x18, x26, [x2], #0x170]
+//[08 00 90 52] [68 97 A8 72] - [movz w8, #0x8000] [movk w8, #0x44bb, lsl #16]
 constinit uint8_t mod16[8] = {0x08, 0x00, 0x90, 0x52, 0x68, 0x97, 0xA8, 0x72};
 							 					 
-//08 00 88 52 88 A3 A8 72 - [movz w8, #0x8000] - [movk w8, #0x44bb, lsl #16]
+//[08 00 88 52] [88 A3 A8 72] - [movz w8, #0x4000] [movk w8, #0x451c, lsl #16]
 constinit uint8_t mod16_p[8] = {0x08, 0x00, 0x88, 0x52, 0x88, 0xA3, 0xA8, 0x72};
 
-//08 54 A8 52 09 00 90 52 [movz w8, #0x42a0, lsl #16] - [movz w9, #0x8000]
+//[08 54 A8 52] 09 00 90 52 - [movz w8, #0x42a0, lsl #16]
 constinit uint8_t mod17[8] = {0x08, 0x54, 0xA8, 0x52, 0x09, 0x00, 0x90, 0x52};
 							 					 
-//48 60 A8 52 [movz w8, #0x4302, lsl #16]
+//48 60 A8 52 - [movz w8, #0x4302, lsl #16]
 constinit uint8_t mod17_p[4] = {0x48, 0x60, 0xA8, 0x52};
 
 //08 54 A8 52 09 00 90 52 69 97 A8 72 - [movz w8, #0x42a0, lsl #16] - [movz w9, #0x8000] - [movk w9, #0x44bb, lsl #16]
@@ -158,34 +158,34 @@ constinit uint8_t mod18[12] = {0x08, 0x54, 0xA8, 0x52, 0x09, 0x00, 0x90, 0x52, 0
 //48 60 A8 52 09 00 88 52 89 A3 A8 72 - [movz w8, #0x4302, lsl #16] - [movz w9, #0x4000] - [movk w9, #0x451c, lsl #16]
 constinit uint8_t mod18_p[12] = {0x48, 0x60, 0xA8, 0x52, 0x09, 0x00, 0x88, 0x52, 0x89, 0xA3, 0xA8, 0x72};
 
-//C7 FF FF 17 28 7C A8 52 - [b #0xffffffffffffff24] - [movz w8, #0x43e1, lsl #16]
+//C7 FF FF 17 [28 7C A8 52] - [movz w8, #0x43e1, lsl #16]
 constinit uint8_t mod19[8] = {0xC7, 0xFF, 0xFF, 0x17, 0x28, 0x7C, 0xA8, 0x52};
 							 					 
 //C7 FF FF 17 [68 88 A8 52] - [movz w8, #0x4443, lsl #16]
 constinit uint8_t mod19_p[8] = {0xC7, 0xFF, 0xFF, 0x17, 0x68, 0x88, 0xA8, 0x52};
 
-//28 7C A8 52 FA 03 17 2A - [movz w8, #0x43e1, lsl #16] - [mov w26, w23]
+//[28 7C A8 52] FA 03 17 2A - [movz w8, #0x43e1, lsl #16]
 constinit uint8_t mod20[8] = {0x28, 0x7C, 0xA8, 0x52, 0xFA, 0x03, 0x17, 0x2A};
 							 					 
 //68 88 A8 52 - [movz w8, #0x4443, lsl #16]
 constinit uint8_t mod20_p[4] = {0x68, 0x88, 0xA8, 0x52};
 
-//C9 50 A8 52 02 01 40 BD - [movz w9, #0x4286, lsl #16]
+//[C9 50 A8 52] 02 01 40 BD - [movz w9, #0x4286, lsl #16]
 constinit uint8_t mod21[8] = {0xC9, 0x50, 0xA8, 0x52, 0x02, 0x01, 0x40, 0xBD};
 							 					 
 //89 5B A8 52 - [movz w9, #0x42dc, lsl #16]
 constinit uint8_t mod21_p[4] = {0x89, 0x5B, 0xA8, 0x52};
 
-//[88 51 A8 52] 00 01 27 1E 40 09 20 1E - 
+//[88 51 A8 52] 00 01 27 1E 40 09 20 1E - ?
 constinit uint8_t mod22[12] = {0x88, 0x51, 0xA8, 0x52, 0x00, 0x01, 0x27, 0x1E, 0x40, 0x09, 0x20, 0x1E};
 							 					 
-//08 5E A8 52 - 
+//08 5E A8 52 - ?
 constinit uint8_t mod22_p[4] = {0x08, 0x5E, 0xA8, 0x52};
 
-//A9 96 42 B9 4A 8F A8 52 - [ldr w9, [x21, #0x294]] - [movz w10, #0x447a, lsl #16]
+//A9 96 42 B9 [4A 8F A8 52] - [movz w10, #0x447a, lsl #16]
 constinit uint8_t mod23[8] = {0xA9, 0x96, 0x42, 0xB9, 0x4A, 0x8F, 0xA8, 0x52};
 							 					 
-//A9 96 42 B9 4A 9F A8 52 - [ldr w9, [x21, #0x294]] - [movz w10, #0x44fa, lsl #16]
+//A9 96 42 B9 [4A 9F A8 52] - [movz w10, #0x44fa, lsl #16]
 constinit uint8_t mod23_p[8] = {0xA9, 0x96, 0x42, 0xB9, 0x4A, 0x9F, 0xA8, 0x52};
 
 //[0A 59 A8 52] A4 4E 41 BD - [movz w10, #0x42c8, lsl #16]
@@ -206,7 +206,7 @@ constinit uint8_t mod26[8] = {0x0A, 0x59, 0xA8, 0x52, 0x84, 0x08, 0x24, 0x1E};
 //0A 79 A8 52 - [movz w10, #0x43c8, lsl #16]
 constinit uint8_t mod26_p[4] = {0x0A, 0x79, 0xA8, 0x52};
 
-//8A A3 A8 72 09 10 B0 12 - [movk w10, #0x451c, lsl #16]
+//[8A A3 A8 72] 09 10 B0 12 - [movk w10, #0x451c, lsl #16]
 constinit uint8_t mod27[8] = {0x8A, 0xA3, 0xA8, 0x72, 0x09, 0x10, 0xB0, 0x12};
 							 					 
 //8A B3 A8 72 - [movk w10, #0x459c, lsl #16]
